@@ -1,0 +1,28 @@
+#include <iostream>
+struct Student
+{
+  char name[100],department[50];
+  int yearOfStudy;
+  float cgpa;
+};
+int main() 
+{
+  int n,i;
+  std::cout<<"Enter the number of students\n";
+  std::cin>>n;
+  Student s[n];
+  for(i=1;i<=n;i++)
+  {
+    std::cout<<"Enter the details of student "<<i<<"\nEnter name\n";
+    std::cin>>s[i].name;
+    std::cout<<"Enter department\n";   
+    std::cin>>s[i].department;
+    std::cout<<"Enter year of study\n";
+    std::cin>>s[i].yearOfStudy;
+    std::cout<<"Enter cgpa\n";
+    std::cin>>s[i].cgpa;
+  }
+  std::cout<<"Details of students";
+  for(i=1;i<=n;i++)
+    std::cout<<"\nStudent "<<i<<"\nName:"<<s[i].name<<"\nDepartment:"<<s[i].department<<"\nYear of study:"<<s[i].yearOfStudy<<"\nCGPA:"<<s[i].cgpa;
+}
